@@ -2,9 +2,13 @@ package com.openschool.infrastructure.adapter.out.persistence.department.reposit
 
 import com.openschool.infrastructure.adapter.out.persistence.department.entity.DepartmentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface JpaDepartmentRepository extends JpaRepository<DepartmentEntity, Long> {
+import java.util.Optional;
+import java.util.UUID;
 
-    // This interface extends JpaRepository to provide CRUD operations for DepartmentEntity.
-    // Additional custom query methods can be defined here if needed.
+@Repository
+public interface JpaDepartmentRepository extends JpaRepository<DepartmentEntity, UUID> {
+
+    Optional<DepartmentEntity> findByDepartmentName(String departmentName);
 }

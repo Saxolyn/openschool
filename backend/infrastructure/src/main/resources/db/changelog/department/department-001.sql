@@ -3,7 +3,7 @@
 --changeset openschool:department-create-database-001
 CREATE TABLE department
 (
-    id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    department_id  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     department_name     VARCHAR(100) NOT NULL,
     description    VARCHAR(255) DEFAULT NULL,
     department_head        VARCHAR(100) DEFAULT NULL,

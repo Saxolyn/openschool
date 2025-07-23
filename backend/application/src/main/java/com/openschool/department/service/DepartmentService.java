@@ -10,7 +10,6 @@ import com.openschool.domain.department.Department;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
-import java.util.Optional;
 
 import static com.openschool.department.mapper.departmentMapper.toDepartment;
 import static com.openschool.department.mapper.departmentMapper.toUpdateDepartment;
@@ -26,8 +25,9 @@ public class DepartmentService implements CreateDepartmentUseCase,
 
     @Override
     public Department createDepartment(CreatedDepartmentCommand createDepartmentCommand) {
-        departmentRepositoryPort.findByName(createDepartmentCommand.getDepartmentName())
-                .orElseThrow(() -> new DepartmentException(ExceptionMessage.DEPARTMENT_ALREADY_EXISTS));
+        if (departmentRepositoryPort.findByDepartmentName(createDepartmentCommand.getDepartmentName()).isPresent()) {
+            throw new DepartmentException(ExceptionMessage.DEPARTMENT_ALREADY_EXISTS);
+        }
         return toDepartment(createDepartmentCommand);
     }
 
@@ -40,6 +40,17 @@ public class DepartmentService implements CreateDepartmentUseCase,
     }
 
     @Override
+    public List<Department> getDepartmentList() {
+        return departmentRepositoryPort.findAll();
+    }
+
+    @Override
+    public Department getDetailDepartment(Object departmentId) {
+        return departmentRepositoryPort.findById(departmentId)
+                .orElseThrow(() -> new DepartmentException(ExceptionMessage.DEPARTMENT_NOT_FOUND));
+    }
+
+    @Override
     public void deleteDepartment(Object id) {
         Department department = departmentRepositoryPort.findById(id).orElseThrow(() -> new DepartmentException(ExceptionMessage.DEPARTMENT_NOT_FOUND));
         boolean result = departmentRepositoryPort.delete(department);
@@ -48,17 +59,4 @@ public class DepartmentService implements CreateDepartmentUseCase,
         }
     }
 
-    @Override
-    public List<Department> getDepartmentList() {
-        return departmentRepositoryPort.findAll();
-    }
-
-    @Override
-    public Optional<Department> getDepartmentList(Object departmentId) {
-        Optional<Department> department = departmentRepositoryPort.findById(departmentId);
-        if (department.isPresent()) {
-            throw new DepartmentException(ExceptionMessage.DEPARTMENT_NOT_FOUND);
-        }
-        return department;
-    }
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class UpdateDepartmentCommand {
-    private String departmentId;
+    private Object departmentId;
     private String departmentName;
     private String description;
     private String departmentHead;

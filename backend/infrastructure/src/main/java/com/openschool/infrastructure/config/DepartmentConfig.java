@@ -6,16 +6,18 @@ import com.openschool.department.port.out.DepartmentRepositoryPort;
 import com.openschool.department.service.DepartmentService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class DepartmentConfig {
 
     @Bean
-    public DepartmentService departmentConfig(DepartmentRepositoryPort departmentRepositoryPort) {
+    public DepartmentService departmentService(DepartmentRepositoryPort departmentRepositoryPort) {
         return new DepartmentService(departmentRepositoryPort);
     }
 
     @Bean
+    @Primary
     public CreateDepartmentUseCase createDepartmentUseCase(DepartmentService departmentService) {
         return departmentService;
     }

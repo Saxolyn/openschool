@@ -29,7 +29,9 @@ public class DevWebSecurityConfig {
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/api/health/**",
-                                "/api/public/**").permitAll()
+                                "/api/public/**",
+                                "/api/v1/departments/*",
+                                "/api/v1/departments").permitAll()
                         .anyRequest().authenticated()
                 )
                 .csrf(AbstractHttpConfigurer::disable)

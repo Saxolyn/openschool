@@ -5,11 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CreatedDepartmentDto {
+public class DepartmentDto {
+    private UUID departmentId;
     private String departmentName;
     private String description;
     private String departmentHead;

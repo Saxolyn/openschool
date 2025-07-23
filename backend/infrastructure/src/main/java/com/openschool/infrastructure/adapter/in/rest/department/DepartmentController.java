@@ -2,9 +2,8 @@ package com.openschool.infrastructure.adapter.in.rest.department;
 
 import com.openschool.department.port.in.CreateDepartmentUseCase;
 import com.openschool.department.port.in.DeleteDepartmentUseCase;
-import com.openschool.department.port.in.ListDepartmentUseCase;
+import com.openschool.department.port.in.GetListDepartmentUseCase;
 import com.openschool.department.port.in.UpdateDepartmentUseCase;
-import com.openschool.department.port.in.command.CreatedDepartmentCommand;
 import com.openschool.domain.department.Department;
 import com.openschool.infrastructure.adapter.in.rest.department.dto.CreatedDepartmentDto;
 import com.openschool.infrastructure.adapter.out.persistence.department.repository.DepartmentRepositoryAdapter;
@@ -22,7 +21,7 @@ public class DepartmentController {
 
     private final CreateDepartmentUseCase createDepartmentUseCase;
     private final UpdateDepartmentUseCase updateDepartmentUseCase;
-    private final ListDepartmentUseCase listDepartmentUseCase;
+    private final GetListDepartmentUseCase listDepartmentUseCase;
     private final DeleteDepartmentUseCase deleteDepartmentUseCase;
     private final DepartmentRepositoryAdapter departmentRepositoryAdapter;
 

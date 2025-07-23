@@ -6,8 +6,8 @@ import com.openschool.infrastructure.adapter.out.persistence.department.reposito
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -31,8 +31,8 @@ public class DepartmentRepositoryAdapter implements DepartmentRepositoryPort {
     }
 
     @Override
-    public void deleteById(Object id) {
-
+    public boolean delete(Department department) {
+return false;
     }
 
     @Override
@@ -41,7 +41,8 @@ public class DepartmentRepositoryAdapter implements DepartmentRepositoryPort {
     }
 
     @Override
-    public Optional<Department> findByIdentityId(UUID identityId) {
-        return Optional.empty();
+    public List<Department> findAll() {
+        return List.of();
     }
+
 }

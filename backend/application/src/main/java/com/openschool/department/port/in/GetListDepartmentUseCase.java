@@ -4,6 +4,6 @@ import com.openschool.domain.department.Department;
 
 import java.util.List;
 
-public interface ListDepartmentUseCase {
+public interface GetListDepartmentUseCase {
     List<Department> getDepartmentList();
 }

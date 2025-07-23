@@ -38,7 +38,7 @@ public class DepartmentController {
     public ResponseEntity<DepartmentDto> updateDepartment(
             @PathVariable("id") Object id,
             @RequestBody DepartmentDto updateDepartmentDto) {
-        updateDepartmentDto.setDepartmentId((UUID) id);
+        updateDepartmentDto.setDepartmentId(UUID.fromString(id.toString()));
         Department department = updateDepartmentUseCase.updateDepartment(dtoToUpdatedDepartmentCommand(updateDepartmentDto));
         return ResponseEntity.ok(toDepartmentDto(departmentRepositoryAdapter.update(department)));
     }
@@ -53,13 +53,13 @@ public class DepartmentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DepartmentDto> getDepartmentDetail(@PathVariable Object id) {
+    public ResponseEntity<DepartmentDto> getDepartmentDetail(@PathVariable("id") Object id) {
         Department department = getDetailDepartmentUseCase.getDetailDepartment(id);
         return ResponseEntity.ok(toDepartmentDto(department));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteDepartment(@PathVariable Object id) {
+    public ResponseEntity<?> deleteDepartment(@PathVariable("id") Object id) {
         deleteDepartmentUseCase.deleteDepartment(id);
         return ResponseEntity.ok().build();
     }

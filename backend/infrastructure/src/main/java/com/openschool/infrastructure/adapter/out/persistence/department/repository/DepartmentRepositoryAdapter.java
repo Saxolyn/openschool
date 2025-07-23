@@ -34,10 +34,7 @@ public class DepartmentRepositoryAdapter implements DepartmentRepositoryPort {
         if (department == null || department.getDepartmentId() == null) {
             return null;
         }
-        if (!(department.getDepartmentId() instanceof UUID)) {
-            return null;
-        }
-        DepartmentEntity entity = jpaDepartmentRepository.findById((UUID) department.getDepartmentId())
+        DepartmentEntity entity = jpaDepartmentRepository.findById(UUID.fromString(department.getDepartmentId().toString()))
                 .orElse(null);
         if (entity == null) {
             return null;
@@ -60,10 +57,7 @@ public class DepartmentRepositoryAdapter implements DepartmentRepositoryPort {
         if (id == null) {
             return Optional.empty();
         }
-        if (!(id instanceof UUID)) {
-            return Optional.empty();
-        }
-        DepartmentEntity entity = jpaDepartmentRepository.findById((UUID) id)
+        DepartmentEntity entity = jpaDepartmentRepository.findById(UUID.fromString(id.toString()))
                 .orElse(null);
         return Optional.ofNullable(toDepartment(entity));
     }
@@ -77,16 +71,11 @@ public class DepartmentRepositoryAdapter implements DepartmentRepositoryPort {
 
     @Override
     public boolean delete(Department department) {
-        if (department == null) {
+        if (department == null || department.getDepartmentId() == null) {
             return false;
         }
-        if (department.getDepartmentId() == null) {
-            return false;
-        }
-        if (!(department.getDepartmentId() instanceof UUID)) {
-            return false;
-        }
-        DepartmentEntity entity = jpaDepartmentRepository.findById((UUID) department.getDepartmentId()).orElse(null);
+
+        DepartmentEntity entity = jpaDepartmentRepository.findById(UUID.fromString(department.getDepartmentId().toString())).orElse(null);
         if (entity == null) {
             return false;
         }

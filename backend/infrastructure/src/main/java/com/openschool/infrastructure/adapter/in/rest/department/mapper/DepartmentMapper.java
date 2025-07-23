@@ -7,10 +7,7 @@ import com.openschool.infrastructure.adapter.in.rest.department.dto.DepartmentDt
 import com.openschool.infrastructure.adapter.out.persistence.department.entity.DepartmentEntity;
 
 import java.time.Instant;
-import java.time.ZoneId;
 import java.util.UUID;
-
-import static com.openschool.infrastructure.utils.TimeUtils.getCurrentTime;
 
 public class DepartmentMapper {
 
@@ -62,8 +59,8 @@ public class DepartmentMapper {
                 .departmentCode(department.getDepartmentCode())
                 .departmentEmail(department.getDepartmentEmail())
                 .departmentPhone(department.getDepartmentPhone())
-                .createdAt(getCurrentTime())
-                .updatedAt(getCurrentTime())
+                .createdAt(Instant.now())
+                .updatedAt(Instant.now())
                 .build();
     }
 

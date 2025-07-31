@@ -1,0 +1,44 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
+
+name: Sync Develop from Upstream
+
+on:    #Define the events that trigger the workflow
+  schedule:
+    - cron: '0 */6 * * *'  # run every 6 hours
+  workflow_dispatch:  # Allow manual triggering of the workflow => enable button in the Actions tab
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/phihai222/OpenSchool.git
+
+      - name: Fetch upstream develop
+        run: git fetch upstream develop
+
+      - name: Switch to develop and merge
+        run: |
+          git checkout origin/develop
+          git reset --hard upstream/develop 
+
+      - name: Push to origin develop
+        run: git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Saxolyn/openschool HEAD:develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

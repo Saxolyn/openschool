@@ -88,4 +88,10 @@ public class AcademicYearEntity {
         }
         return academicYear;
     }
+
+    public static AcademicYearEntity referenceOnly(UUID id) {
+        AcademicYearEntity entity = new AcademicYearEntity();
+        entity.setId(id);
+        return entity;
+    }
 }

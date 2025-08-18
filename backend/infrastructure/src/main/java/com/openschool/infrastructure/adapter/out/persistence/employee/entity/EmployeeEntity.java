@@ -31,4 +31,10 @@ public class EmployeeEntity extends BaseEntity {
     private UUID department;
     private String position;
     private EmployeeType employeeType;
+
+    public static EmployeeEntity referenceOnly(UUID employeeId) {
+        EmployeeEntity entity = new EmployeeEntity();
+        entity.setEmployeeId(employeeId);
+        return entity;
+    }
 }

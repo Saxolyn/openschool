@@ -81,4 +81,10 @@ public class GradeEntity extends BaseEntity {
                 .status(this.status)
                 .build();
     }
+
+    public static GradeEntity referenceOnly(UUID id) {
+        GradeEntity entity = new GradeEntity();
+        entity.setId(id);
+        return entity;
+    }
 }

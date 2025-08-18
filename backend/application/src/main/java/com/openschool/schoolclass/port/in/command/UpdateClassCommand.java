@@ -11,13 +11,10 @@ import java.util.UUID;
 @Setter
 @Builder
 @AllArgsConstructor
-public class CreateClassCommand {
+public class UpdateClassCommand {
+    private UUID classId;
     private String name;
-    private String code;
     private String description;
-    private UUID schoolId;
-    private UUID gradeId;
-    private UUID academicYearId;
     private Integer maxStudents;
     private UUID homeroomTeacherId;
 }

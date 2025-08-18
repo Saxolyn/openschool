@@ -4,5 +4,5 @@ import com.openschool.domain.schoolclass.model.SchoolClass;
 import com.openschool.schoolclass.port.in.command.CreateClassCommand;
 
 public interface CreateClassUseCase {
-    SchoolClass createClass(CreateClassCommand createClassCommand);
+    SchoolClass createClass(CreateClassCommand command);
 }

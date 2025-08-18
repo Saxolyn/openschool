@@ -4,6 +4,10 @@ import com.openschool.common.exception.CustomerException;
 import com.openschool.common.exception.ExcelProcessingException;
 import com.openschool.common.exception.ExcelValidationException;
 import com.openschool.common.exception.InvalidExcelFormatException;
+import com.openschool.common.file.exception.FileAccessDeniedException;
+import com.openschool.common.file.exception.FileNotFoundException;
+import com.openschool.common.file.exception.FileProcessingException;
+import com.openschool.common.file.exception.FileValidationException;
 import com.openschool.department.exception.DepartmentException;
 import com.openschool.common.exception.DataNotFound;
 import com.openschool.identity.exception.InvalidCredentialsException;
@@ -71,6 +75,44 @@ public class GlobalExceptionHandler {
         private java.util.List<String> validationErrors;
 
         public ExcelValidationErrorResponse(String message, java.util.List<String> validationErrors) {
+            this.message = message;
+            this.validationErrors = validationErrors;
+        }
+
+        public String getMessage() { return message; }
+        public java.util.List<String> getValidationErrors() { return validationErrors; }
+    }
+
+    @ExceptionHandler(FileProcessingException.class)
+    public ResponseEntity<String> handleFileProcessingException(FileProcessingException ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(FileNotFoundException.class)
+    public ResponseEntity<String> handleFileNotFoundException(FileNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(FileAccessDeniedException.class)
+    public ResponseEntity<String> handleFileAccessDeniedException(FileAccessDeniedException ex) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(FileValidationException.class)
+    public ResponseEntity<FileValidationErrorResponse> handleFileValidationException(FileValidationException ex) {
+        FileValidationErrorResponse response = new FileValidationErrorResponse(
+            ex.getMessage(),
+            ex.getValidationErrors()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
+
+    // Response class for File validation errors
+    public static class FileValidationErrorResponse {
+        private String message;
+        private java.util.List<String> validationErrors;
+
+        public FileValidationErrorResponse(String message, java.util.List<String> validationErrors) {
             this.message = message;
             this.validationErrors = validationErrors;
         }

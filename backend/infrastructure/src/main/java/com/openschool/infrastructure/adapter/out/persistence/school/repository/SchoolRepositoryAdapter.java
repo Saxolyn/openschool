@@ -3,7 +3,7 @@ package com.openschool.infrastructure.adapter.out.persistence.school.repository;
 import com.openschool.domain.school.School;
 import com.openschool.infrastructure.adapter.out.persistence.school.entity.SchoolEntity;
 import com.openschool.infrastructure.adapter.out.persistence.school.repository.jpa.JpaSchoolRepository;
-import com.openschool.school.port.out.SchoolRepositoryPort;
+import com.openschool.administration.school.port.out.SchoolRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 

@@ -5,7 +5,7 @@ import com.openschool.infrastructure.adapter.out.persistence.student.entity.Guar
 import com.openschool.infrastructure.adapter.out.persistence.student.entity.StudentEntity;
 import com.openschool.infrastructure.adapter.out.persistence.student.entity.StudentGuardianEntity;
 import com.openschool.infrastructure.adapter.out.persistence.student.repository.jpa.JpaStudentGuardianRepository;
-import com.openschool.student.port.out.StudentGuardianRepositoryPort;
+import com.openschool.education.student.port.out.StudentGuardianRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 

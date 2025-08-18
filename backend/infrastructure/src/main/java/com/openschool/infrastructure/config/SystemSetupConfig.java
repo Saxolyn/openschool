@@ -1,12 +1,12 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.academic.port.in.CreateAcademicYearUseCase;
-import com.openschool.grade.port.in.CreateGradeUseCase;
-import com.openschool.identity.port.in.InitRootUserUseCase;
-import com.openschool.school.port.in.CreateSchoolUseCase;
-import com.openschool.systemsetup.port.in.*;
-import com.openschool.systemsetup.port.out.SystemSetupRepositoryPort;
-import com.openschool.systemsetup.service.SystemSetupService;
+import com.openschool.education.academic.port.in.CreateAcademicYearUseCase;
+import com.openschool.education.grade.port.in.CreateGradeUseCase;
+import com.openschool.system.identity.port.in.InitRootUserUseCase;
+import com.openschool.administration.school.port.in.CreateSchoolUseCase;
+import com.openschool.system.systemsetup.port.in.*;
+import com.openschool.system.systemsetup.port.out.SystemSetupRepositoryPort;
+import com.openschool.system.systemsetup.service.SystemSetupService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

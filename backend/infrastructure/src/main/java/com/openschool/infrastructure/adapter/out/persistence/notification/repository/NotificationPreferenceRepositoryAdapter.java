@@ -2,7 +2,7 @@ package com.openschool.infrastructure.adapter.out.persistence.notification.repos
 
 import com.openschool.domain.notification.NotificationPreference;
 import com.openschool.infrastructure.adapter.out.persistence.notification.entity.NotificationPreferenceEntity;
-import com.openschool.notification.port.out.NotificationPreferenceRepositoryPort;
+import com.openschool.system.notification.port.out.NotificationPreferenceRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

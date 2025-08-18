@@ -1,10 +1,10 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.notification.port.in.*;
-import com.openschool.notification.port.out.*;
-import com.openschool.notification.service.EmailTemplateService;
-import com.openschool.notification.service.NotificationPreferenceService;
-import com.openschool.notification.service.NotificationService;
+import com.openschool.system.notification.port.in.*;
+import com.openschool.system.notification.port.out.*;
+import com.openschool.system.notification.service.EmailTemplateService;
+import com.openschool.system.notification.service.NotificationPreferenceService;
+import com.openschool.system.notification.service.NotificationService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

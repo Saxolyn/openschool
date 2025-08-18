@@ -2,11 +2,11 @@ package com.openschool.infrastructure.adapter.in.rest.systemsetup.mapper;
 
 import com.openschool.domain.systemsetup.SystemSetupStatus;
 import com.openschool.domain.systemsetup.SetupStep;
-import com.openschool.grade.port.in.command.CreateGradeCommand;
+import com.openschool.education.grade.port.in.command.CreateGradeCommand;
 import com.openschool.infrastructure.adapter.in.rest.systemsetup.dto.*;
-import com.openschool.school.port.in.command.CreateSchoolCommand;
-import com.openschool.systemsetup.port.in.command.CreateAdminCommand;
-import com.openschool.academic.port.in.command.CreateAcademicYearCommand;
+import com.openschool.administration.school.port.in.command.CreateSchoolCommand;
+import com.openschool.system.systemsetup.port.in.command.CreateAdminCommand;
+import com.openschool.education.academic.port.in.command.CreateAcademicYearCommand;
 
 public class SystemSetupDtoMapper {
     public static SystemSetupStatusResponse toResponse(SystemSetupStatus domain) {

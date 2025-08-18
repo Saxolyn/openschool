@@ -4,7 +4,7 @@ import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
 import com.openschool.domain.employee.Employee;
 import com.openschool.domain.employee.EmployeeType;
-import com.openschool.employee.port.out.EmployeeRepositoryPort;
+import com.openschool.administration.employee.port.out.EmployeeRepositoryPort;
 import com.openschool.infrastructure.adapter.in.rest.employee.mapper.EmployeeMapper;
 import com.openschool.infrastructure.adapter.out.persistence.employee.entity.EmployeeEntity;
 import com.openschool.infrastructure.adapter.out.persistence.employee.repository.jpa.EmployeeRepository;

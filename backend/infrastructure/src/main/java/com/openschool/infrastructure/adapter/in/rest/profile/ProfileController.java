@@ -1,9 +1,9 @@
 package com.openschool.infrastructure.adapter.in.rest.profile;
 
 import com.openschool.domain.identity.model.Profile;
-import com.openschool.identity.port.in.GetCurrentUserProfileUseCase;
-import com.openschool.identity.port.in.UpdateProfileUseCase;
-import com.openschool.identity.port.in.command.UpdateProfileCommand;
+import com.openschool.system.identity.port.in.GetCurrentUserProfileUseCase;
+import com.openschool.system.identity.port.in.UpdateProfileUseCase;
+import com.openschool.system.identity.port.in.command.UpdateProfileCommand;
 import com.openschool.infrastructure.adapter.in.rest.profile.dto.UpdateProfileRequest;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;

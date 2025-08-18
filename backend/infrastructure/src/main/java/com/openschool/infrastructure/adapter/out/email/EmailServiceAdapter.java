@@ -1,6 +1,6 @@
 package com.openschool.infrastructure.adapter.out.email;
 
-import com.openschool.notification.port.out.EmailServicePort;
+import com.openschool.system.notification.port.out.EmailServicePort;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.AllArgsConstructor;

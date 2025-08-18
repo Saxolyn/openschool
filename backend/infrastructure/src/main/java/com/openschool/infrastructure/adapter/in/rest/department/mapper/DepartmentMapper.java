@@ -1,8 +1,8 @@
 package com.openschool.infrastructure.adapter.in.rest.department.mapper;
 
 import com.openschool.common.pageable.PageResult;
-import com.openschool.department.port.in.command.CreatedDepartmentCommand;
-import com.openschool.department.port.in.command.UpdateDepartmentCommand;
+import com.openschool.administration.department.port.in.command.CreatedDepartmentCommand;
+import com.openschool.administration.department.port.in.command.UpdateDepartmentCommand;
 import com.openschool.domain.department.Department;
 import com.openschool.infrastructure.adapter.in.rest.department.dto.request.DepartmentRequestDto;
 import com.openschool.infrastructure.adapter.in.rest.department.dto.response.DepartmentResponseDto;

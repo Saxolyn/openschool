@@ -2,7 +2,7 @@ package com.openschool.infrastructure.adapter.out.persistence.department.reposit
 
 import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
-import com.openschool.department.port.out.DepartmentRepositoryPort;
+import com.openschool.administration.department.port.out.DepartmentRepositoryPort;
 import com.openschool.domain.department.Department;
 import com.openschool.infrastructure.adapter.in.rest.department.mapper.DepartmentMapper;
 import com.openschool.infrastructure.adapter.out.persistence.department.entity.DepartmentEntity;

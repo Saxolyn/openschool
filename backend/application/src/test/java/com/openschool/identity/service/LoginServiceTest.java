@@ -1,10 +1,11 @@
 package com.openschool.identity.service;
 
 import com.openschool.domain.identity.model.Account;
-import com.openschool.identity.exception.InvalidCredentialsException;
-import com.openschool.identity.port.out.AccountRepositoryPort;
-import com.openschool.identity.port.out.PasswordEncoderPort;
-import com.openschool.identity.port.out.TokenGeneratorPort;
+import com.openschool.system.identity.exception.InvalidCredentialsException;
+import com.openschool.system.identity.port.out.AccountRepositoryPort;
+import com.openschool.system.identity.port.out.PasswordEncoderPort;
+import com.openschool.system.identity.port.out.TokenGeneratorPort;
+import com.openschool.system.identity.service.LoginService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

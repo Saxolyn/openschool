@@ -1,16 +1,17 @@
 package com.openschool.employee.service;
 
+import com.openschool.administration.employee.service.EmployeeService;
 import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
-import com.openschool.department.exception.DepartmentException;
-import com.openschool.department.port.out.DepartmentRepositoryPort;
+import com.openschool.administration.department.exception.DepartmentException;
+import com.openschool.administration.department.port.out.DepartmentRepositoryPort;
 import com.openschool.domain.department.Department;
 import com.openschool.domain.employee.Employee;
 import com.openschool.domain.employee.EmployeeType;
-import com.openschool.employee.exception.EmployeeException;
-import com.openschool.employee.port.in.command.CreatedEmployeeCommand;
-import com.openschool.employee.port.in.command.UpdatedEmployeeCommand;
-import com.openschool.employee.port.out.EmployeeRepositoryPort;
+import com.openschool.administration.employee.exception.EmployeeException;
+import com.openschool.administration.employee.port.in.command.CreatedEmployeeCommand;
+import com.openschool.administration.employee.port.in.command.UpdatedEmployeeCommand;
+import com.openschool.administration.employee.port.out.EmployeeRepositoryPort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +19,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static com.openschool.employee.exception.ExceptionMessage.EMPLOYEE_ALREADY_EXISTS;
-import static com.openschool.employee.exception.ExceptionMessage.EMPLOYEE_CREATION_FAIL;
+import static com.openschool.administration.employee.exception.ExceptionMessage.EMPLOYEE_ALREADY_EXISTS;
+import static com.openschool.administration.employee.exception.ExceptionMessage.EMPLOYEE_CREATION_FAIL;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;

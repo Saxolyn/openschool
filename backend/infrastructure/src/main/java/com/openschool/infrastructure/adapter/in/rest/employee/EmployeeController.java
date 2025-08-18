@@ -1,10 +1,10 @@
 package com.openschool.infrastructure.adapter.in.rest.employee;
 
+import com.openschool.administration.employee.port.in.*;
 import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
 import com.openschool.domain.employee.Employee;
 import com.openschool.domain.employee.EmployeeType;
-import com.openschool.employee.port.in.*;
 import com.openschool.infrastructure.adapter.in.rest.employee.dto.request.EmployeeRequestDto;
 import com.openschool.infrastructure.adapter.in.rest.employee.dto.response.EmployeeResponseDto;
 import com.openschool.infrastructure.adapter.in.rest.employee.mapper.EmployeeMapper;

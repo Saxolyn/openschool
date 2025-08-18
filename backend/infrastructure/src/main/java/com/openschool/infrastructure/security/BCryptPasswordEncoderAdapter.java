@@ -1,6 +1,6 @@
 package com.openschool.infrastructure.security;
 
-import com.openschool.identity.port.out.PasswordEncoderPort;
+import com.openschool.system.identity.port.out.PasswordEncoderPort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;

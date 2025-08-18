@@ -1,7 +1,7 @@
 package com.openschool.infrastructure.adapter.out.persistence.grade.repository;
 
 import com.openschool.domain.grade.Grade;
-import com.openschool.grade.port.out.GradeRepositoryPort;
+import com.openschool.education.grade.port.out.GradeRepositoryPort;
 import com.openschool.infrastructure.adapter.out.persistence.grade.entity.GradeEntity;
 import com.openschool.infrastructure.adapter.out.persistence.grade.repository.jpa.JpaGradeRepository;
 import com.openschool.infrastructure.adapter.out.persistence.school.entity.SchoolEntity;

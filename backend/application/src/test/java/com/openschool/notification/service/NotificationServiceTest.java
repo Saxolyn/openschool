@@ -3,18 +3,19 @@ package com.openschool.notification.service;
 import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
 import com.openschool.domain.notification.*;
-import com.openschool.notification.exception.EmailSendingException;
-import com.openschool.notification.exception.InvalidRecipientException;
-import com.openschool.notification.port.in.command.SendEmailCommand;
-import com.openschool.notification.port.in.command.SendInternalMessageCommand;
-import com.openschool.notification.port.out.*;
+import com.openschool.system.notification.exception.EmailSendingException;
+import com.openschool.system.notification.exception.InvalidRecipientException;
+import com.openschool.system.notification.port.in.command.SendEmailCommand;
+import com.openschool.system.notification.port.in.command.SendInternalMessageCommand;
+import com.openschool.system.notification.port.in.command.MarkAsReadCommand;
+import com.openschool.system.notification.port.out.*;
+import com.openschool.system.notification.service.NotificationService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDateTime;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -277,7 +278,7 @@ class NotificationServiceTest {
         
         // When
         boolean result = notificationService.markAsRead(
-            com.openschool.notification.port.in.command.MarkAsReadCommand.builder()
+            MarkAsReadCommand.builder()
                 .notificationId(notificationId)
                 .userId(userId)
                 .build()

@@ -1,8 +1,8 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.department.port.in.*;
-import com.openschool.department.port.out.DepartmentRepositoryPort;
-import com.openschool.department.service.DepartmentService;
+import com.openschool.administration.department.port.in.*;
+import com.openschool.administration.department.port.out.DepartmentRepositoryPort;
+import com.openschool.administration.department.service.DepartmentService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

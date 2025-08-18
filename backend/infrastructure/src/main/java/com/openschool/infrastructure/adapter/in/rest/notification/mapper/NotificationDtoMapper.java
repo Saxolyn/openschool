@@ -2,8 +2,8 @@ package com.openschool.infrastructure.adapter.in.rest.notification.mapper;
 
 import com.openschool.infrastructure.adapter.in.rest.notification.dto.MarkAsReadRequest;
 import com.openschool.infrastructure.adapter.in.rest.notification.dto.SendInternalMessageRequest;
-import com.openschool.notification.port.in.command.MarkAsReadCommand;
-import com.openschool.notification.port.in.command.SendInternalMessageCommand;
+import com.openschool.system.notification.port.in.command.MarkAsReadCommand;
+import com.openschool.system.notification.port.in.command.SendInternalMessageCommand;
 
 /**
  * Mapper for notification DTOs

@@ -1,7 +1,7 @@
 package com.openschool.infrastructure.security;
 
 import com.openschool.domain.identity.model.Account;
-import com.openschool.identity.port.out.TokenGeneratorPort;
+import com.openschool.system.identity.port.out.TokenGeneratorPort;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,6 +1,6 @@
 package com.openschool.infrastructure.adapter.out.notification;
 
-import com.openschool.notification.port.out.PushNotificationServicePort;
+import com.openschool.system.notification.port.out.PushNotificationServicePort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;

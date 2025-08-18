@@ -6,7 +6,7 @@ import com.openschool.domain.student.Guardian;
 import com.openschool.infrastructure.adapter.out.persistence.student.entity.GuardianEntity;
 import com.openschool.infrastructure.adapter.out.persistence.student.repository.jpa.JpaGuardianRepository;
 import com.openschool.infrastructure.adapter.out.persistence.student.repository.jpa.JpaStudentGuardianRepository;
-import com.openschool.student.port.out.GuardianRepositoryPort;
+import com.openschool.education.student.port.out.GuardianRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -6,7 +6,7 @@ import com.openschool.domain.notification.Notification;
 import com.openschool.domain.notification.NotificationStatus;
 import com.openschool.domain.notification.NotificationType;
 import com.openschool.infrastructure.adapter.out.persistence.notification.entity.NotificationEntity;
-import com.openschool.notification.port.out.NotificationRepositoryPort;
+import com.openschool.system.notification.port.out.NotificationRepositoryPort;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

@@ -2,8 +2,8 @@ package com.openschool.infrastructure.adapter.in.rest.employee.mapper;
 
 import com.openschool.common.pageable.PageResult;
 import com.openschool.domain.employee.Employee;
-import com.openschool.employee.port.in.command.CreatedEmployeeCommand;
-import com.openschool.employee.port.in.command.UpdatedEmployeeCommand;
+import com.openschool.administration.employee.port.in.command.CreatedEmployeeCommand;
+import com.openschool.administration.employee.port.in.command.UpdatedEmployeeCommand;
 import com.openschool.infrastructure.adapter.in.rest.employee.dto.request.EmployeeRequestDto;
 import com.openschool.infrastructure.adapter.in.rest.employee.dto.response.EmployeeResponseDto;
 import com.openschool.infrastructure.adapter.out.persistence.employee.entity.EmployeeEntity;

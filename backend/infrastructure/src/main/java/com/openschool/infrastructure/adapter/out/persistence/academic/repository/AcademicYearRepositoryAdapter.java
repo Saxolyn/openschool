@@ -1,6 +1,6 @@
 package com.openschool.infrastructure.adapter.out.persistence.academic.repository;
 
-import com.openschool.academic.port.out.AcademicYearRepositoryPort;
+import com.openschool.education.academic.port.out.AcademicYearRepositoryPort;
 import com.openschool.domain.academic.AcademicYear;
 import com.openschool.infrastructure.adapter.out.persistence.academic.entity.AcademicYearEntity;
 import com.openschool.infrastructure.adapter.out.persistence.academic.repository.jpa.JpaAcademicYearRepository;

@@ -4,7 +4,7 @@ import com.openschool.domain.systemsetup.SystemSetupStatus;
 import com.openschool.infrastructure.adapter.out.persistence.systemsetup.entity.SystemSetupStatusEntity;
 import com.openschool.infrastructure.adapter.out.persistence.systemsetup.mapper.SystemSetupStatusMapper;
 import com.openschool.infrastructure.adapter.out.persistence.systemsetup.repository.jpa.JpaSystemSetupRepository;
-import com.openschool.systemsetup.port.out.SystemSetupRepositoryPort;
+import com.openschool.system.systemsetup.port.out.SystemSetupRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 

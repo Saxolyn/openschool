@@ -1,10 +1,10 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.schoolclass.port.in.CreateClassUseCase;
-import com.openschool.schoolclass.port.in.EnrollStudentToClassUseCase;
-import com.openschool.schoolclass.port.out.SchoolClassRepositoryPort;
-import com.openschool.schoolclass.service.SchoolClassService;
-import com.openschool.student.port.out.StudentRepositoryPort;
+import com.openschool.education.schoolclass.port.in.CreateClassUseCase;
+import com.openschool.education.schoolclass.port.in.EnrollStudentToClassUseCase;
+import com.openschool.education.schoolclass.port.out.SchoolClassRepositoryPort;
+import com.openschool.education.schoolclass.service.SchoolClassService;
+import com.openschool.education.student.port.out.StudentRepositoryPort;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

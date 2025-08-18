@@ -3,11 +3,12 @@ package com.openschool.identity.service;
 import com.openschool.domain.identity.model.Account;
 import com.openschool.domain.identity.model.Identity;
 import com.openschool.domain.identity.model.Role;
-import com.openschool.identity.exception.UserAlreadyExistsException;
-import com.openschool.identity.port.out.AccountRepositoryPort;
-import com.openschool.identity.port.out.PasswordEncoderPort;
-import com.openschool.identity.port.out.IdentityRepositoryPort;
-import com.openschool.identity.port.out.RoleRepositoryPort;
+import com.openschool.system.identity.exception.UserAlreadyExistsException;
+import com.openschool.system.identity.port.out.AccountRepositoryPort;
+import com.openschool.system.identity.port.out.PasswordEncoderPort;
+import com.openschool.system.identity.port.out.IdentityRepositoryPort;
+import com.openschool.system.identity.port.out.RoleRepositoryPort;
+import com.openschool.system.identity.service.InitRootUserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

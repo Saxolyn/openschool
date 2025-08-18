@@ -1,13 +1,13 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.identity.port.in.GetCurrentUserProfileUseCase;
-import com.openschool.identity.port.in.LoginUseCase;
-import com.openschool.identity.port.in.UpdateProfileUseCase;
-import com.openschool.identity.port.out.*;
-import com.openschool.identity.service.InitRootUserService;
-import com.openschool.identity.port.in.InitRootUserUseCase;
-import com.openschool.identity.service.LoginService;
-import com.openschool.identity.service.ProfileService;
+import com.openschool.system.identity.port.in.GetCurrentUserProfileUseCase;
+import com.openschool.system.identity.port.in.LoginUseCase;
+import com.openschool.system.identity.port.in.UpdateProfileUseCase;
+import com.openschool.system.identity.port.out.*;
+import com.openschool.system.identity.service.InitRootUserService;
+import com.openschool.system.identity.port.in.InitRootUserUseCase;
+import com.openschool.system.identity.service.LoginService;
+import com.openschool.system.identity.service.ProfileService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

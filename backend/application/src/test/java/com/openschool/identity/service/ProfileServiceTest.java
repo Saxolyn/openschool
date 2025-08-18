@@ -2,10 +2,11 @@ package com.openschool.identity.service;
 
 import com.openschool.domain.identity.model.Profile;
 import com.openschool.common.exception.DataNotFound;
-import com.openschool.identity.exception.InvalidCredentialsException;
-import com.openschool.identity.port.in.command.UpdateProfileCommand;
-import com.openschool.identity.port.out.IdentityRepositoryPort;
-import com.openschool.identity.port.out.ProfileRepositoryPort;
+import com.openschool.system.identity.exception.InvalidCredentialsException;
+import com.openschool.system.identity.port.in.command.UpdateProfileCommand;
+import com.openschool.system.identity.port.out.IdentityRepositoryPort;
+import com.openschool.system.identity.port.out.ProfileRepositoryPort;
+import com.openschool.system.identity.service.ProfileService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,9 +1,9 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.department.port.out.DepartmentRepositoryPort;
-import com.openschool.employee.port.in.*;
-import com.openschool.employee.port.out.EmployeeRepositoryPort;
-import com.openschool.employee.service.EmployeeService;
+import com.openschool.administration.department.port.out.DepartmentRepositoryPort;
+import com.openschool.administration.employee.port.in.*;
+import com.openschool.administration.employee.port.out.EmployeeRepositoryPort;
+import com.openschool.administration.employee.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -2,7 +2,7 @@ package com.openschool.infrastructure.adapter.out.persistence.identity.repositor
 
 import com.openschool.domain.identity.model.Account;
 import com.openschool.domain.identity.model.Role;
-import com.openschool.identity.port.out.AccountRepositoryPort;
+import com.openschool.system.identity.port.out.AccountRepositoryPort;
 import com.openschool.infrastructure.adapter.out.persistence.identity.entity.AccountEntity;
 import com.openschool.infrastructure.adapter.out.persistence.identity.entity.RoleEntity;
 import com.openschool.infrastructure.adapter.out.persistence.identity.repository.jpa.JpaAccountRepository;

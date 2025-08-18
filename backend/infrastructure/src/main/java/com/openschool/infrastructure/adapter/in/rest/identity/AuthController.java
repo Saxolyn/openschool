@@ -1,6 +1,6 @@
 package com.openschool.infrastructure.adapter.in.rest.identity;
 
-import com.openschool.identity.port.in.LoginUseCase;
+import com.openschool.system.identity.port.in.LoginUseCase;
 import com.openschool.infrastructure.adapter.in.rest.identity.dto.LoginRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

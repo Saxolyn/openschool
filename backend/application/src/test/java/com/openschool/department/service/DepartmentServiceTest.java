@@ -1,12 +1,13 @@
 package com.openschool.department.service;
 
+import com.openschool.administration.department.service.DepartmentService;
 import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
-import com.openschool.department.exception.DepartmentException;
-import com.openschool.department.exception.ExceptionMessage;
-import com.openschool.department.port.in.command.CreatedDepartmentCommand;
-import com.openschool.department.port.in.command.UpdateDepartmentCommand;
-import com.openschool.department.port.out.DepartmentRepositoryPort;
+import com.openschool.administration.department.exception.DepartmentException;
+import com.openschool.administration.department.exception.ExceptionMessage;
+import com.openschool.administration.department.port.in.command.CreatedDepartmentCommand;
+import com.openschool.administration.department.port.in.command.UpdateDepartmentCommand;
+import com.openschool.administration.department.port.out.DepartmentRepositoryPort;
 import com.openschool.domain.department.Department;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -9,7 +9,7 @@ import com.openschool.infrastructure.adapter.out.persistence.school.entity.Schoo
 import com.openschool.infrastructure.adapter.out.persistence.schoolclass.entity.SchoolClassEntity;
 import com.openschool.infrastructure.adapter.out.persistence.student.entity.StudentEntity;
 import com.openschool.infrastructure.adapter.out.persistence.student.repository.jpa.JpaStudentRepository;
-import com.openschool.student.port.out.StudentRepositoryPort;
+import com.openschool.education.student.port.out.StudentRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

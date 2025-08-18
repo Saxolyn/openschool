@@ -1,14 +1,14 @@
 package com.openschool.infrastructure.adapter.in.rest.department;
 
+import com.openschool.administration.department.port.in.*;
 import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
-import com.openschool.department.port.in.*;
 import com.openschool.domain.department.Department;
 import com.openschool.domain.employee.Employee;
-import com.openschool.employee.port.in.AssignEmployeeUseCase;
-import com.openschool.employee.port.in.GetListEmployeeInDepartmentUseCase;
-import com.openschool.employee.port.in.MoveEmployeeUseCase;
-import com.openschool.employee.port.in.RemoveEmployeeUseCase;
+import com.openschool.administration.employee.port.in.AssignEmployeeUseCase;
+import com.openschool.administration.employee.port.in.GetListEmployeeInDepartmentUseCase;
+import com.openschool.administration.employee.port.in.MoveEmployeeUseCase;
+import com.openschool.administration.employee.port.in.RemoveEmployeeUseCase;
 import com.openschool.infrastructure.adapter.in.rest.department.dto.request.DepartmentRequestDto;
 import com.openschool.infrastructure.adapter.in.rest.department.dto.response.DepartmentResponseDto;
 import com.openschool.infrastructure.adapter.in.rest.employee.dto.response.EmployeeResponseDto;

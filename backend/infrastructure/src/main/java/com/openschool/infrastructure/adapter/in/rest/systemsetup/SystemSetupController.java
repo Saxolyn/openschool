@@ -1,9 +1,9 @@
 package com.openschool.infrastructure.adapter.in.rest.systemsetup;
 
-import com.openschool.grade.port.in.command.CreateGradeCommand;
+import com.openschool.education.grade.port.in.command.CreateGradeCommand;
 import com.openschool.infrastructure.adapter.in.rest.systemsetup.dto.*;
 import com.openschool.infrastructure.adapter.in.rest.systemsetup.mapper.SystemSetupDtoMapper;
-import com.openschool.systemsetup.port.in.*;
+import com.openschool.system.systemsetup.port.in.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

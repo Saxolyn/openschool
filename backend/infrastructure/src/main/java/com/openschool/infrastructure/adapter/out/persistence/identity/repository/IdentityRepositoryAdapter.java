@@ -1,7 +1,7 @@
 package com.openschool.infrastructure.adapter.out.persistence.identity.repository;
 
 import com.openschool.domain.identity.model.Identity;
-import com.openschool.identity.port.out.IdentityRepositoryPort;
+import com.openschool.system.identity.port.out.IdentityRepositoryPort;
 import com.openschool.infrastructure.adapter.out.persistence.identity.entity.IdentityEntity;
 import com.openschool.infrastructure.adapter.out.persistence.identity.repository.jpa.JpaIdentityRepository;
 import lombok.AllArgsConstructor;

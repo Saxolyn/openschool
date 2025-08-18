@@ -1,9 +1,9 @@
 package com.openschool.infrastructure.config;
 
-import com.openschool.grade.port.in.CreateGradeUseCase;
-import com.openschool.grade.port.out.GradeRepositoryPort;
-import com.openschool.grade.service.GradeService;
-import com.openschool.school.port.out.SchoolRepositoryPort;
+import com.openschool.education.grade.port.in.CreateGradeUseCase;
+import com.openschool.education.grade.port.out.GradeRepositoryPort;
+import com.openschool.education.grade.service.GradeService;
+import com.openschool.administration.school.port.out.SchoolRepositoryPort;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

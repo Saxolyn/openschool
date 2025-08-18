@@ -1,6 +1,6 @@
 package com.openschool.infrastructure.adapter.in.rest.systemsetup.dto;
 
-import com.openschool.academic.port.in.command.CreateSemesterCommand;
+import com.openschool.education.academic.port.in.command.CreateSemesterCommand;
 import com.openschool.domain.academic.AcademicYearStatus;
 import lombok.Getter;
 import lombok.Setter;

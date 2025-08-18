@@ -1,9 +1,10 @@
 package com.openschool.notification.service;
 
 import com.openschool.domain.notification.EmailTemplate;
-import com.openschool.notification.exception.NotificationException;
-import com.openschool.notification.port.in.command.CreateEmailTemplateCommand;
-import com.openschool.notification.port.out.EmailTemplateRepositoryPort;
+import com.openschool.system.notification.exception.NotificationException;
+import com.openschool.system.notification.port.in.command.CreateEmailTemplateCommand;
+import com.openschool.system.notification.port.out.EmailTemplateRepositoryPort;
+import com.openschool.system.notification.service.EmailTemplateService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

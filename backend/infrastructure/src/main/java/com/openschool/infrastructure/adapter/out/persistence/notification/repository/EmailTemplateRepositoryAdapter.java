@@ -4,7 +4,7 @@ import com.openschool.common.pageable.PageInfo;
 import com.openschool.common.pageable.PageResult;
 import com.openschool.domain.notification.EmailTemplate;
 import com.openschool.infrastructure.adapter.out.persistence.notification.entity.EmailTemplateEntity;
-import com.openschool.notification.port.out.EmailTemplateRepositoryPort;
+import com.openschool.system.notification.port.out.EmailTemplateRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

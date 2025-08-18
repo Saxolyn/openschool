@@ -10,7 +10,7 @@ import com.openschool.infrastructure.adapter.out.persistence.grade.entity.GradeE
 import com.openschool.infrastructure.adapter.out.persistence.school.entity.SchoolEntity;
 import com.openschool.infrastructure.adapter.out.persistence.schoolclass.entity.SchoolClassEntity;
 import com.openschool.infrastructure.adapter.out.persistence.schoolclass.repository.jpa.JpaSchoolClassRepository;
-import com.openschool.schoolclass.port.out.SchoolClassRepositoryPort;
+import com.openschool.education.schoolclass.port.out.SchoolClassRepositoryPort;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

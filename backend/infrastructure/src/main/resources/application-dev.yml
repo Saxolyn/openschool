@@ -16,6 +16,20 @@ spring:
     change-log: classpath:/db/changelog/changelog-master.yaml
     enabled: true
 
+  # Email configuration
+  mail:
+    host: localhost
+    port: 1025
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+        debug: true
+
 server:
   port: 8080
 

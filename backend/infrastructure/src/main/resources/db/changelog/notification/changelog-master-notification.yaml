@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/notification/notification-001-create-tables.sql
+  - include:
+      file: db/changelog/notification/notification-002-create-indexes.sql
+  - include:
+      file: db/changelog/notification/notification-003-insert-default-templates.sql

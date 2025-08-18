@@ -15,3 +15,5 @@ databaseChangeLog:
       file: db/changelog/grade/changelog-master-grade.yaml
   - include:
       file: db/changelog/employee/changelog-master-employee.yaml
+  - include:
+      file: db/changelog/notification/changelog-master-notification.yaml

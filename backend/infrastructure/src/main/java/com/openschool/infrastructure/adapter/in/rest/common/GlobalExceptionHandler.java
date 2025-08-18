@@ -13,6 +13,10 @@ import com.openschool.common.exception.DataNotFound;
 import com.openschool.identity.exception.InvalidCredentialsException;
 import com.openschool.identity.exception.UserAlreadyExistsException;
 import com.openschool.common.exception.ForbiddenSetup;
+import com.openschool.notification.exception.NotificationException;
+import com.openschool.notification.exception.EmailSendingException;
+import com.openschool.notification.exception.TemplateNotFoundException;
+import com.openschool.notification.exception.InvalidRecipientException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -48,6 +52,26 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ForbiddenSetup.class)
     public ResponseEntity<String> handleForbiddenSetup(ForbiddenSetup ex) {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(NotificationException.class)
+    public ResponseEntity<String> handleNotificationException(NotificationException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(EmailSendingException.class)
+    public ResponseEntity<String> handleEmailSendingException(EmailSendingException ex) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(TemplateNotFoundException.class)
+    public ResponseEntity<String> handleTemplateNotFoundException(TemplateNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(InvalidRecipientException.class)
+    public ResponseEntity<String> handleInvalidRecipientException(InvalidRecipientException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
     @ExceptionHandler(ExcelProcessingException.class)

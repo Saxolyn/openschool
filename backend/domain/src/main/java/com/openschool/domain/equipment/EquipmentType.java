@@ -1,0 +1,20 @@
+package com.openschool.domain.equipment;
+
+public enum EquipmentType {
+    COMPUTER,
+    PROJECTOR,
+    PRINTER,
+    SCANNER,
+    CAMERA,
+    AUDIO_EQUIPMENT,
+    LABORATORY_EQUIPMENT,
+    SPORTS_EQUIPMENT,
+    FURNITURE,
+    VEHICLE,
+    CLEANING_EQUIPMENT,
+    KITCHEN_EQUIPMENT,
+    MEDICAL_EQUIPMENT,
+    SECURITY_EQUIPMENT,
+    NETWORK_EQUIPMENT,
+    OTHER
+}
